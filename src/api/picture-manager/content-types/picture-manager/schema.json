@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "picture_managers",
+  "info": {
+    "singularName": "picture-manager",
+    "pluralName": "picture-managers",
+    "displayName": "PictureManager"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "page": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::page.page",
+      "inversedBy": "picture_managers"
+    }
+  }
+}
